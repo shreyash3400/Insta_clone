@@ -1,0 +1,43 @@
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .formCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: seagreen;
+        padding: 10rem 4rem;
+        border-radius: 2rem;
+    }
+    form{
+        display: flex;
+        gap:1rem;
+        flex-direction: column;
+        padding-inline: 1rem;
+        padding-block: 1.5rem;
+        
+        
+        input,button{
+            padding:1.5rem 2rem;
+            border: none;
+            text-decoration: none;
+            border-radius: 1rem;
+        }
+        button{
+            color: black;
+            transition: all ease 0.3s;
+            cursor: pointer ;
+        }
+        button:hover{
+            background-color: transparent;
+            border: solid 0.1rem black;
+            color:white
+        }
+    }
+}

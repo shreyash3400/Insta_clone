@@ -29,7 +29,7 @@ async function registerUser (req,res){const {username,email,password,bio,profile
     const token = jwt.sign(
         {
             id:user._id ,
-            username:isUserAlreadyExists.username
+            username:user.username
         },
         process.env.JWT,
         {expiresIn:"1d"}
