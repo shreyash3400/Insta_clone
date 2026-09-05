@@ -2,6 +2,8 @@ const userModel = require('../models/user.model')
 const jwt = require("jsonwebtoken");
 const crypto = require("bcrypt");
 const cookie = require("cookie-parser")
+
+
 async function registerUser (req,res){const {username,email,password,bio,profileImage}= req.body;
 
     const isUserAlreadyExists = await userModel.findOne({

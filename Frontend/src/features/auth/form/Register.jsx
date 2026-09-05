@@ -1,22 +1,20 @@
 import React, { useState } from 'react'
 import axios from "axios"
+import { Link } from 'react-router'
+import {useAuth} from '../../hooks/auth.hook'
+
 
 const Register = () => {
     const [username, setusername] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
 
+    const {registerHandler} = useAuth()
+
     async function submitHandler(e){
         e.preventDefault()
 
-        await axios.post('http://localhost:3000/api/auth/register',{
-            username,
-            email,
-            password
-        }, {withCredentials: true})
-        .then((res)=>{
-            console.log((res.data));
-        })
+        registerHandler(username,email,password)
         
     }
 
@@ -36,6 +34,7 @@ const Register = () => {
                         setpassword(e.target.value)
                     }} type="password" name='password' placeholder='Enter password' />
                     <button>Register</button>
+                    <Link to={'/login'}>Have a Account</Link>
                 </form>
             </div>
         </main>

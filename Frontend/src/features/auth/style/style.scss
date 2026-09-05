@@ -39,5 +39,15 @@ main{
             border: solid 0.1rem black;
             color:white
         }
+        a{
+            
+            text-decoration: none;
+            font-size: 1.5rem;
+            
+
+            span{
+                color:red;
+            }
+        }
     }
 }
